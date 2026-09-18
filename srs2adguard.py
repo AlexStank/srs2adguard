@@ -33,7 +33,7 @@ DEFAULT_OUTPUT_FILE = Path("adguard-proxy.txt")
 SINGBOX_BIN = "sing-box"
 JQ_BIN = "jq"
 
-JQ_FILTER = '.rules[] | (.domain[]?, (.domain_suffix[]? | ltrimstr(".") | "*." + .), .ip_cidr[]?)'
+JQ_FILTER = '.rules[] | (.domain[]?, (.domain_suffix[]? | ltrimstr(".") | ., "*." + .), .ip_cidr[]?)'
 
 
 def download_srs(url: str, dest: Path) -> None:
