@@ -12,7 +12,7 @@ geosite-openai
 
 Conversion is started like this:
 ```
-python srs2adguard.py rulesets.txt -o adguard-proxy.txt
+python srs2adguard.py rulesets.txt -o adguard-exclusions.txt
 ```
 
 The result of the conversion is a text file containing domains and/or IP addresses.

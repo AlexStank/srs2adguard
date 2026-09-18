@@ -9,7 +9,7 @@ Script:
 3. Decompiles each srs/*.srs file into JSON.
    By default .json files saves into json directory.
 4. Compiles the final list for AdGuard VPN from all json/*.json files using jq and saves it in output file.
-   By default output filename is adguard-proxy.txt.
+   By default output filename is adguard-exclusions.txt.
 
 Requires:
 1. sing-box
@@ -28,7 +28,7 @@ GEOIP_URL_TEMPLATE = "https://raw.githubusercontent.com/Loyalsoldier/geoip/relea
 
 DEFAULT_SRS_DIR = Path("srs")
 DEFAULT_JSON_DIR = Path("json")
-DEFAULT_OUTPUT_FILE = Path("adguard-proxy.txt")
+DEFAULT_OUTPUT_FILE = Path("adguard-exclusions.txt")
 
 SINGBOX_BIN = "sing-box"
 JQ_BIN = "jq"
