@@ -113,7 +113,7 @@ def build_adguard_list(output_file: Path, json_dir: Path) -> None:
         
     lines = {line for line in result.stdout.splitlines() if line.strip()}
         
-    with output_file.open("a", encoding="utf-8") as f:
+    with output_file.open("w", encoding="utf-8") as f:
         for line in sorted(lines):
             f.write(line + "\n")
 
